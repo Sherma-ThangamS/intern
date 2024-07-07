@@ -1,0 +1,75 @@
+// about.scss
+
+.about {
+  background-color: #121212; /* Dark background color */
+  color: #fff; /* Light text color */
+  padding: 40px 0;
+  text-align: center;
+  overflow: hidden; /* Ensure hidden overflow for parallax effect */
+  height: 120vh;
+}
+
+.about-content {
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(0); /* Initial position for parallax effect */
+  transition: transform 0.3s ease; /* Smooth transition for parallax effect */
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    perspective: 1000px; /* Add perspective for 3D effect */
+
+    .card {
+      flex: 1;
+      padding: 20px;
+      background-color: #333; /* Dark card background color */
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      margin: 10px;
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+/* Parallax effect for .about-content */
+.about:hover .about-content {
+  transform: translateY(-20px); /* Adjust the translateY value for the parallax effect */
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-content .card-container .card {
+    flex: 0 0 calc(50% - 20px); /* Two cards per row on tablets */
+  }
+}
+/* Responsive styles for mobile */
+@media (max-width: 767px) {
+  .about-content .card-container .card {
+    flex: 0 0 100%; /* Full width for cards on mobile */
+  }
+}

@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .circle {
+    width: 24px;
+    height: 24px;
+    position: fixed;
+    display: block;
+    border-radius:20px;
+    pointer-events:none;
+    z-index: 1;
+  }

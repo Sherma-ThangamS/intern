@@ -1,0 +1,79 @@
+
+.community {
+  position: relative;
+  background-color: #121212;
+  color: #fff;
+  height: 100vh;
+}
+
+.community-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 50px;
+}
+
+.community-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  bottom: -700px;
+  left: 0;
+  right: 0;
+}
+
+.community-card {
+  flex: 1;
+  max-width: 300px;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transform: translateZ(0); /* Ensure hardware acceleration for smoother animation */
+  transition: transform 0.3s ease;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .community-button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e5b800;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .community-cards {
+    bottom: -650px; /* Adjust the position for better visibility on smaller screens */
+  }
+}
+
+// For tablet view
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .community-cards {
+    bottom: -700px; /* Adjust the position for better visibility on tablet screens */
+  }
+}

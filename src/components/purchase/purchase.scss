@@ -1,0 +1,62 @@
+// purchase.scss
+
+.purchase {
+  background-color: #121212; /* Dark background color */
+  color: #fff; /* Light text color */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purchase-content {
+  z-index: 1;
+  text-align: center;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .purchase-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px 0 20px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      background-color: #333; /* Dark input background color */
+      color: #fff; /* Light text color */
+    }
+
+    button {
+      padding: 15px;
+      background-color: #ffcc00; /* Yellow button color */
+      color: #121212; /* Dark text color */
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #e5b800; /* Darker yellow button color on hover */
+      }
+    }
+  }
+}
